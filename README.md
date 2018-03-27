@@ -4,7 +4,7 @@ A simple PHP API extension for Textlocal (any country but defaults to UK) SMS ga
 
 Require this package in your composer.json and update composer. This will download the package.
 
-composer require ridown/TextLocal
+    composer require ridown/TextLocal
 
 # Installation
 ## Laravel
