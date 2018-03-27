@@ -19,7 +19,11 @@ Require this package in your composer.json and update composer. This will downlo
 
     composer require ridown/TextLocal
 
+or..
 
+add the following to your require section of package.json
+
+   "ridown/TextLocal": "*",
 
 
 ## Laravel
