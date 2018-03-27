@@ -18,7 +18,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-				"Ridown\\TextLocal\\": "src/"
+				"Ridown\\TextLocal\\": "src"
 		}
 	},
 	"extra": {
@@ -26,7 +26,10 @@
 				"providers": [
 					"Ridown\\TextLocal\\ServiceProvider"
 				]
-		}
+		},
+        "branch-alias": {
+          "dev-master": "1.0-dev"
+        }
 	},
 	"minimum-stability": "dev"
 }
