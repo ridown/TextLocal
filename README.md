@@ -17,13 +17,13 @@ add this on your composer.json
 
 Require this package in your composer.json and update composer. This will download the package.
 
-    composer require ridown/TextLocal
+    composer require ridown/textlocal
 
 or..
 
 add the following to your require section of package.json
 
-   "ridown/TextLocal": "*",
+   "ridown/textlocal": "*",
 
 
 ## Laravel
