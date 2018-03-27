@@ -39,5 +39,5 @@ After adding ServiceProvider, Run the command
     
 After that set your TextLocal URL and auth Key inside config/sms.php
 
-$sms = new TextLocal();
-$sms->send('message', 'mobile number');
+    $sms = new TextLocal();
+    $sms->send('message', 'mobile number');
