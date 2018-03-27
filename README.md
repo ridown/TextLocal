@@ -10,7 +10,7 @@ add this on your composer.json
 "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/ridown/TextLocal"
+            "url": "https://github.com/ridown/TextLocal.git"
         }
  ],
 ```
