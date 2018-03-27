@@ -8,7 +8,7 @@ class TextLocal
 
     public function __construct()
     {
-        $conn = 'sms.connections'.config('sms.default');
+        $conn = 'sms.connections.'.config('sms.default');
         
         $this->key    = config( $conn . '.key');
         $this->sender = config( $conn . '.sender');
