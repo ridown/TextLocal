@@ -1,33 +1,32 @@
 {
-    	"name": "ridown/textlocal",
+	"name": "ridown/textlocal",
 	"type": "library",
-    	"description": "TextLocal SMS gateway wrapper for Laravel",
-    	"license": "MIT",
-    	"keywords": ["laravel", "TextLocal", "sms gateway"],
+	"description": "TextLocal SMS gateway wrapper for Laravel",
+	"keywords": ["laravel", "TextLocal", "sms gateway"],
 	"homepage": "http://github.com/ridown/TextLocal",
 	"license": "MIT",
 	"version": "1.0.0",
-    	"authors": [
-        	{
-            		"name": "Paul Robbins",
-            		"email": "paul.robbins@ridown.com",
-            		"role": "developer"
-        	}
-    	],
-    	"require": {
-        	"php": ">=7.0.0"
-    	},
-    	"autoload": {
-        	"psr-4": {
-            		"Ridown\\TextLocal\\": "src/"
-        	}
-    	},
+	"authors": [
+		{
+			"name": "Paul Robbins",
+			"email": "paul.robbins@ridown.com",
+			"role": "developer"
+		}
+	],
+	"require": {
+		"php": ">=7.0.0"
+	},
+	"autoload": {
+		"psr-4": {
+				"Ridown\\TextLocal\\": "src/"
+		}
+	},
 	"extra": {
-        	"laravel": {
-            		"providers": [
-                		"Ridown\\TextLocal\\ServiceProvider"
-            		]
-        	}
-    	},
-    	"minimum-stability": "dev"
+		"laravel": {
+				"providers": [
+					"Ridown\\TextLocal\\ServiceProvider"
+				]
+		}
+	},
+	"minimum-stability": "dev"
 }
