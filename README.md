@@ -2,11 +2,26 @@
 
 A simple PHP API extension for Textlocal (any country but defaults to UK) SMS gateway integration in Laravel
 
+# Installation
+
+add this on your composer.json
+
+```
+"repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/ridown/TextLocal"
+        }
+ ],
+```
+
 Require this package in your composer.json and update composer. This will download the package.
 
     composer require ridown/TextLocal
 
-# Installation
+
+
+
 ## Laravel
 After updating composer, add the ServiceProvider to the providers array in config/app.php
 
