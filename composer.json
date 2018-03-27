@@ -1,5 +1,5 @@
 {
-    "name": "ridown/TextLocal",
+    "name": "ridown/textlocal",
     "description": "TextLocal SMS gateway wrapper for Laravel",
     "license": "MIT",
     "keywords": ["laravel", "TextLocal", "sms gateway"],
