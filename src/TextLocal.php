@@ -20,6 +20,11 @@ class TextLocal
         $this->url    = config( $conn . '.url');
         $this->format = config( $conn . '.format');
     }
+
+    public function getBalance()
+    {
+        return $this->_sendRequest('balance');
+    }
     
     public function send($message, $numbers, $sender = null, $sched = null, $test = false, $receiptURL = null, $custom = null, $optouts = false, $simpleReplyService = false)
     {
