@@ -40,4 +40,9 @@ After adding ServiceProvider, Run the command
 After that set your TextLocal URL and auth Key inside config/sms.php
 
     $sms = new TextLocal();
+    
+    Send text message:
     $sms->send('message', 'mobile number');
+    
+    Get balance:
+    $sms->getBalance();
