@@ -33,7 +33,7 @@ class TextLocal
         $unicode = false;
         if(strstr($message, 'U+')) {
             $unicode=true;
-            $message = $this->unicodeMessageEncode($message);
+            //$message = $this->unicodeMessageEncode($message);
         }
         
         if(!is_array($numbers)) $numbers = [$numbers];
