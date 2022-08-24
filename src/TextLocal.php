@@ -30,6 +30,12 @@ class TextLocal
     {
         $sender = ($sender != null) ? $sender : $this->sender;
         
+        $unicode = false;
+        if(strstr($message, 'U+')) {
+            $unicode=true;
+            $message = $this->unicodeMessageEncode($message);
+        }
+        
         if(!is_array($numbers)) $numbers = [$numbers];
         $params = [
             'message'       => rawurlencode($message),
@@ -41,6 +47,7 @@ class TextLocal
             'custom'        => $custom,
             'optouts'       => $optouts,
             'simple_reply'  => $simpleReplyService,
+            'unicode'       => $unicode,
         ];
         
         return $this->_sendRequest('send', $params);
@@ -106,6 +113,18 @@ class TextLocal
         return $rawResponse;
     }
     
-    
+    function unicodeMessageDecode($message) {
+        if (stripos($message, '@U') !== 0) {
+            return $message;
+        }
+        $message = substr($message, 2);
+        $_message = hex2bin($message);
+        $message = mb_convert_encoding($_message, 'UTF-8', 'UCS-2');
+        return $message;
+    }
+
+    function unicodeMessageEncode($message){
+        return '@U' . strtoupper(bin2hex(mb_convert_encoding($message, 'UCS-2','auto')));
+    }
     
 }
