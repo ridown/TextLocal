@@ -32,7 +32,7 @@ class TextLocal
         
         $unicode = false;
         if(strstr($message, 'U+')) {
-            $unicode=true;
+            //$unicode=true;
             //$message = $this->unicodeMessageEncode($message);
         }
         
