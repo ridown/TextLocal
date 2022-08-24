@@ -4,7 +4,7 @@ namespace Ridown\TextLocal;
 
 class TextLocal
 {
-    private $url, $apiKey, $sender, $format, $username, $hash;
+    private $url, $apiKey, $sender, $format, $username, $hash, $unicode_enabled = false;
     
     const REQUEST_TIMEOUT = 60;
     const REQUEST_HANDLER = 'curl';
@@ -19,6 +19,7 @@ class TextLocal
         $this->sender = config( $conn . '.sender');
         $this->url    = config( $conn . '.url');
         $this->format = config( $conn . '.format');
+        $this->unicode_enabled = = config( $conn . '.unicode_enabled', false);
     }
 
     public function getBalance()
@@ -31,7 +32,7 @@ class TextLocal
         $sender = ($sender != null) ? $sender : $this->sender;
         
         $unicode = false;
-        if(strstr($message, 'U+')) {
+        if(strstr($message, 'U+') && $this->unicode_enabled) {
             $unicode='true';
             $message = $this->unicodeMessageEncode($message);
         }
