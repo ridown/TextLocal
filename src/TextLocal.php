@@ -113,7 +113,7 @@ class TextLocal
         return $rawResponse;
     }
     
-    function unicodeMessageDecode($message) {
+    protected function unicodeMessageDecode($message) {
         if (stripos($message, '@U') !== 0) {
             return $message;
         }
@@ -123,8 +123,12 @@ class TextLocal
         return $message;
     }
 
-    function unicodeMessageEncode($message){
+    protected function unicodeMessageEncode($message){
         return '@U' . strtoupper(bin2hex(mb_convert_encoding($message, 'UCS-2','auto')));
     }
+    
+    protected function utf8_to_unicode_codepoints($text) {
+         return ''.implode(unpack('H*', iconv("UTF-8", "UCS-2BE", $text)));
+     }
     
 }
