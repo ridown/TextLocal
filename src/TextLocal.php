@@ -19,7 +19,7 @@ class TextLocal
         $this->sender = config( $conn . '.sender');
         $this->url    = config( $conn . '.url');
         $this->format = config( $conn . '.format');
-        $this->unicode_enabled = = config( $conn . '.unicode_enabled', false);
+        $this->unicode_enabled = config( $conn . '.unicode_enabled', false);
     }
 
     public function getBalance()
