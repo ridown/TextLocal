@@ -46,3 +46,6 @@ After that set your TextLocal URL and auth Key inside config/sms.php
     
     Get balance:
     $sms->getBalance();
+
+    Get text message status:
+    $sms->getMessageStatus($messageid);

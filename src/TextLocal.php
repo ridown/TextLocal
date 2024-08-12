@@ -54,7 +54,18 @@ class TextLocal
         return $this->_sendRequest('send', $params);
         
     }
-    
+
+    /**
+     * Get the status of a message based on the Message ID - this can be taken from send() or from a history report
+     * @param $messageidhttps://github.com/ridown/TextLocal.git
+     * @return array|mixed
+     */
+    public function getMessageStatus($messageid)
+    {
+        $params = array("message_id" => $messageid);
+        return $this->_sendRequest('status_message', $params);
+    }
+
     private function _sendRequest($command, $params = [])
     {
         if ($this->apiKey && ! empty($this->apiKey)) {
